@@ -17,7 +17,7 @@ if [[ ! -d $LFS/sources ]]; then
   # Verify we have all of the source files.
   shopt -s nullglob
   files=($LFS/sources/*)
-  if (( "${#files[@]}" != 87 )); then
+  if (( "${#files[@]}" != 86 )); then
     echo "ARRGGHH! I see ${#files[@]} in $LFS/sources when I should see 87. Bailing out here!"
     exit
   fi
@@ -60,96 +60,96 @@ echo "************************************"
 echo "* Now, for building daz toolchain! *"
 echo "************************************"
 echo
-# 5.4. Binutils-2.31.1 - Pass 1
-echo "Building: 5.4. Binutils-2.31.1 - Pass 1 - Pass 1 (30 packages left)"
-sh /scripts/binutils-2.31.1.sh > /mnt/lfs/sources/logs/binutils-2.31.1 2>&1
-# 5.5. GCC-8.2.0 - Pass 1
-echo "Building: 5.5. GCC-8.2.0 - Pass 1 (29 packages left)"
-sh /scripts/gcc-8.2.0.sh > /mnt/lfs/sources/logs/gcc-8.2.0 2>&1
-# 5.6. Linux-4.18.5 API Headers 
-echo "Building: 5.6. Linux-4.18.5 API Headers  (28 packages left)"
-sh /scripts/linux-4.18.5.sh > /mnt/lfs/sources/logs/linux-4.18.5 2>&1
-# 5.7. Glibc-2.28
-echo "Building: 5.7. Glibc-2.28 (27 packages left)"
-sh /scripts/glibc-2.28.sh > /mnt/lfs/sources/logs/glibc-2.28 2>&1
-# 5.8. Libstdc++ from GCC-8.2.0
-echo "Building: 5.8. Libstdc++ from GCC-8.2.0 (26 packages left)"
-sh /scripts/libstdc++-8.2.0.sh > /mnt/lfs/sources/logs/libstdc++-8.2.0 2>&1
-# 5.9. Binutils-2.31.1 - Pass 2
-echo "Building: 5.9. Binutils-2.31.1 - Pass 2 (25 packages left)"
-sh /scripts/binutils-2.31.1-pass2.sh > /mnt/lfs/sources/logs/binutils-2.31.1-pass2 2>&1
-# 5.10. GCC-8.2.0 - Pass 2
-echo "Building: 5.10. GCC-8.2.0 - Pass 2 (24 packages left)"
-sh /scripts/gcc-8.2.0-pass2.sh > /mnt/lfs/sources/logs/gcc-8.2.0-pass2 2>&1
-# 5.11. Tcl-8.6.8
-echo "Building: 5.11. Tcl-8.6.8 (23 packages left)"
-sh /scripts/tcl8.6.8.sh > /mnt/lfs/sources/logs/tcl8.6.8 2>&1
+# 5.4. Binutils-2.32 - Pass 1
+echo "Building: 5.4. Binutils-2.32 - Pass 1 - Pass 1 (30 packages left)"
+sh /scripts/binutils-2.32.sh > /mnt/lfs/sources/logs/binutils-2.32 2>&1
+# 5.5. GCC-9.2.0 - Pass 1
+echo "Building: 5.5. GCC-9.2.0 - Pass 1 (29 packages left)"
+sh /scripts/gcc-9.2.0.sh > /mnt/lfs/sources/logs/gcc-9.2.0 2>&1
+# 5.6. Linux-5.2.8 API Headers
+echo "Building: 5.6. Linux-5.2.8 API Headers  (28 packages left)"
+sh /scripts/linux-5.2.8.sh > /mnt/lfs/sources/logs/linux-5.2.8 2>&1
+# 5.7. Glibc-2.30
+echo "Building: 5.7. Glibc-2.30 (27 packages left)"
+sh /scripts/glibc-2.30.sh > /mnt/lfs/sources/logs/glibc-2.30 2>&1
+# 5.8. Libstdc++ from GCC-9.2.0
+echo "Building: 5.8. Libstdc++ from GCC-9.2.0 (26 packages left)"
+sh /scripts/libstdc++-9.2.0.sh > /mnt/lfs/sources/logs/libstdc++-9.2.0 2>&1
+# 5.9. Binutils-2.32 - Pass 2
+echo "Building: 5.9. Binutils-2.32 - Pass 2 (25 packages left)"
+sh /scripts/binutils-2.32-pass2.sh > /mnt/lfs/sources/logs/binutils-2.32-pass2 2>&1
+# 5.10. GCC-9.2.0 - Pass 2
+echo "Building: 5.10. GCC-9.2.0 - Pass 2 (24 packages left)"
+sh /scripts/gcc-9.2.0-pass2.sh > /mnt/lfs/sources/logs/gcc-9.2.0-pass2 2>&1
+# 5.11. Tcl-8.6.9
+echo "Building: 5.11. Tcl-8.6.9 (23 packages left)"
+sh /scripts/tcl8-.6.9.sh > /mnt/lfs/sources/logs/tcl-8.6.9 2>&1
 # 5.12. Expect-5.45.4
 echo "Building: 5.12. Expect-5.45.4 (22 packages left)"
-sh /scripts/expect5.45.4.sh > /mnt/lfs/sources/logs/expect5.45.4 2>&1
-# 5.13. DejaGNU-1.6.1
-echo "Building: 5.13. DejaGNU-1.6.1 (21 packages left)"
-sh /scripts/dejagnu-1.6.1.sh > /mnt/lfs/sources/logs/dejagnu-1.6.1 2>&1
+sh /scripts/expect-5.45.4.sh > /mnt/lfs/sources/logs/expect-5.45.4 2>&1
+# 5.13. DejaGNU-1.6.2
+echo "Building: 5.13. DejaGNU-1.6.2 (21 packages left)"
+sh /scripts/dejagnu-1.6.2.sh > /mnt/lfs/sources/logs/dejagnu-1.6.2 2>&1
 # 5.14. M4-1.4.18
 echo "Building: 5.14. M4-1.4.18 (20 packages left)"
 sh /scripts/m4-1.4.18.sh > /mnt/lfs/sources/logs/m4-1.4.18 2>&1
 # 5.15. Ncurses-6.1
 echo "Building: 5.15. Ncurses-6.1 (19 packages left)"
 sh /scripts/ncurses-6.1.sh > /mnt/lfs/sources/logs/ncurses-6.1 2>&1
-# 5.16. Bash-4.4.18
-echo "Building: 5.16. Bash-4.4.18 (18 packages left)"
-sh /scripts/bash-4.4.18.sh > /mnt/lfs/sources/logs/bash-4.4.18 2>&1
-# 5.17. Bison-3.0.5
-echo "Building: 5.17. Bison-3.0.5 (17 packages left)"
-sh /scripts/bison-3.0.5.sh > /mnt/lfs/sources/logs/bison-3.0.5 2>&1
-# 5.18. Bzip2-1.0.6
-echo "Building: 5.18. Bzip2-1.0.6 (16 packages left)"
-sh /scripts/bzip2-1.0.6.sh > /mnt/lfs/sources/logs/bzip2-1.0.6 2>&1
-# 5.19. Coreutils-8.30
-echo "Building: 5.19. Coreutils-8.30 (15 packages left)"
-sh /scripts/coreutils-8.30.sh > /mnt/lfs/sources/logs/coreutils-8.30 2>&1
-# 5.20. Diffutils-3.6
-echo "Building: 5.20. Diffutils-3.6 (14 packages left)"
-sh /scripts/diffutils-3.6.sh > /mnt/lfs/sources/logs/diffutils-3.6 2>&1
-# 5.21. File-5.34
-echo "Building: 5.21. File-5.34 (13 packages left)"
-sh /scripts/file-5.34.sh > /mnt/lfs/sources/logs/file-5.34 2>&1
+# 5.16. Bash-5.0
+echo "Building: 5.16. Bash-5.0 (18 packages left)"
+sh /scripts/bash-5.0.sh > /mnt/lfs/sources/logs/bash-5.0 2>&1
+# 5.17. Bison-3.4.1
+echo "Building: 5.17. Bison-3.4.1 (17 packages left)"
+sh /scripts/bison-3.4.1.sh > /mnt/lfs/sources/logs/bison-3.4.1 2>&1
+# 5.18. Bzip2-1.0.8
+echo "Building: 5.18. Bzip2-1.0.8 (16 packages left)"
+sh /scripts/bzip2-1.0.8.sh > /mnt/lfs/sources/logs/bzip2-1.0.8 2>&1
+# 5.19. Coreutils-8.31
+echo "Building: 5.19. Coreutils-8.31 (15 packages left)"
+sh /scripts/coreutils-8.31.sh > /mnt/lfs/sources/logs/coreutils-8.31 2>&1
+# 5.20. Diffutils-3.7
+echo "Building: 5.20. Diffutils-3.7 (14 packages left)"
+sh /scripts/diffutils-3.7.sh > /mnt/lfs/sources/logs/diffutils-3.7 2>&1
+# 5.21. File-5.37
+echo "Building: 5.21. File-5.37 (13 packages left)"
+sh /scripts/file-5.37.sh > /mnt/lfs/sources/logs/file-5.37 2>&1
 # 5.22. Findutils-4.6.0
 echo "Building: 5.22. Findutils-4.6.0 (12 packages left)"
 sh /scripts/findutils-4.6.0.sh > /mnt/lfs/sources/logs/findutils-4.6.0 2>&1
-# 5.23. Gawk-4.2.1
-echo "Building: 5.23. Gawk-4.2.1 (11 packages left)"
-sh /scripts/gawk-4.2.1.sh > /mnt/lfs/sources/logs/gawk-4.2.1 2>&1
-# 5.24. Gettext-0.19.8.1
-echo "Building: 5.24. Gettext-0.19.8.1 (10 packages left)"
-sh /scripts/gettext-0.19.8.1.sh > /mnt/lfs/sources/logs/gettext-0.19.8.1 2>&1
-# 5.25. Grep-3.1
-echo "Building: 5.25. Grep-3.1 (9 packages left)"
-sh /scripts/grep-3.1.sh > /mnt/lfs/sources/logs/grep-3.1 2>&1
-# 5.26. Gzip-1.9
-echo "Building: 5.26. Gzip-1.9 (8 packages left)"
-sh /scripts/gzip-1.9.sh > /mnt/lfs/sources/logs/gzip-1.9 2>&1
+# 5.23. Gawk-5.0.1
+echo "Building: 5.23. Gawk-5.0.1 (11 packages left)"
+sh /scripts/gawk-5.0.1.sh > /mnt/lfs/sources/logs/gawk-5.0.1 2>&1
+# 5.24. Gettext-0.20.1
+echo "Building: 5.24. Gettext-0.20.1 (10 packages left)"
+sh /scripts/gettext-0.20.1.sh > /mnt/lfs/sources/logs/gettext-0.20.1 2>&1
+# 5.25. Grep-3.3
+echo "Building: 5.25. Grep-3.3 (9 packages left)"
+sh /scripts/grep-3.3.sh > /mnt/lfs/sources/logs/grep-3.3 2>&1
+# 5.26. Gzip-1.10
+echo "Building: 5.26. Gzip-1.10 (8 packages left)"
+sh /scripts/gzip-1.10.sh > /mnt/lfs/sources/logs/gzip-1.10 2>&1
 # 5.27. Make-4.2.1
 echo "Building: 5.27. Make-4.2.1 (7 packages left)"
 sh /scripts/make-4.2.1.sh > /mnt/lfs/sources/logs/make-4.2.1 2>&1
 # 5.28. Patch-2.7.6
 echo "Building: 5.28. Patch-2.7.6 (6 packages left)"
 sh /scripts/patch-2.7.6.sh > /mnt/lfs/sources/logs/patch-2.7.6 2>&1
-# 5.29. Perl-5.28.0
-echo "Building: 5.29. Perl-5.28.0 (5 packages left)"
-sh /scripts/perl-5.28.0.sh > /mnt/lfs/sources/logs/perl-5.28.0 2>&1
-# 5.30. Sed-4.5
-echo "Building: 5.30. Sed-4.5 (4 packages left)"
-sh /scripts/sed-4.5.sh > /mnt/lfs/sources/logs/sed-4.5 2>&1
-# 5.31. Tar-1.30
-echo "Building: 5.31. Tar-1.30 (3 packages left)"
-sh /scripts/tar-1.30.sh > /mnt/lfs/sources/logs/tar-1.30 2>&1
-# 5.32. Texinfo-6.5
-echo "Building: 5.32. Texinfo-6.5 (2 packages left)"
-sh /scripts/texinfo-6.5.sh > /mnt/lfs/sources/logs/texinfo-6.5 2>&1
-# 5.33. Util-linux-2.32.1
-echo "Building: 5.33. Util-linux-2.32.1 (1 package left)"
-sh /scripts/util-linux-2.32.1.sh > /mnt/lfs/sources/logs/util-linux-2.32.1 2>&1
+# 5.29. Perl-5.30.0
+echo "Building: 5.30. Perl-5.30.0 (5 packages left)"
+sh /scripts/perl-5.30.0.sh > /mnt/lfs/sources/logs/perl-5.28.0 2>&1
+# 5.30. Python-3.7.4
+echo "Building: 5.30 Python-3.7.4 (4 packages left)"
+sh /scripts/python-3.7.4.sh > /mnt/lfs/sources/logs/python-3.7.4 2>&1
+# 5.31. Sed-4.7
+echo "Building: 5.31. Sed-4.7 (3 packages left)"
+sh /scripts/sed-4.7.sh > /mnt/lfs/sources/logs/sed-4.7 2>&1
+# 5.32. Tar-1.32
+echo "Building: 5.32. Tar-1.32 (2 packages left)"
+sh /scripts/tar-1.32.sh > /mnt/lfs/sources/logs/tar-1.32 2>&1
+# 5.33. Texinfo-6.6
+echo "Building: 5.33. Texinfo-6.6 (1 packages left)"
+sh /scripts/texinfo-6.6.sh > /mnt/lfs/sources/logs/texinfo-6.6 2>&1
 # 5.34. Xz-5.2.4
 echo "Building: 5.34. Xz-5.2.4 (last package)"
 sh /scripts/xz-5.2.4.sh > /mnt/lfs/sources/logs/xz-5.2.4 2>&1
