@@ -15,6 +15,7 @@ sed -i s/mawk// configure
             --enable-overwrite
 make
 make install
+ln -s libncursesw.so /tools/lib/libncurses.so
 
 cd $LFS/sources
 rm -rf ncurses-6.1

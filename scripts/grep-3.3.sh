@@ -1,14 +1,14 @@
 #!/bin/bash
-# 5.30. Sed-4.5
+# 5.25. Grep-3.3
 set -e
 cd $LFS/sources
-rm -rf sed-4.5
-tar xf sed-4.5.tar.xz
-cd sed-4.5
+rm -rf grep-3.3
+tar xf grep-3.3.tar.xz
+cd grep-3.3
 
 ./configure --prefix=/tools
 make
 make install
 
 cd $LFS/sources
-rm -rf sed-4.5
+rm -rf grep-3.3

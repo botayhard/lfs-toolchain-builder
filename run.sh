@@ -18,7 +18,7 @@ if [[ ! -d $LFS/sources ]]; then
   shopt -s nullglob
   files=($LFS/sources/*)
   if (( "${#files[@]}" != 86 )); then
-    echo "ARRGGHH! I see ${#files[@]} in $LFS/sources when I should see 87. Bailing out here!"
+    echo "ARRGGHH! I see ${#files[@]} in $LFS/sources when I should see 86. Bailing out here!"
     exit
   fi
 
@@ -83,7 +83,7 @@ echo "Building: 5.10. GCC-9.2.0 - Pass 2 (24 packages left)"
 sh /scripts/gcc-9.2.0-pass2.sh > /mnt/lfs/sources/logs/gcc-9.2.0-pass2 2>&1
 # 5.11. Tcl-8.6.9
 echo "Building: 5.11. Tcl-8.6.9 (23 packages left)"
-sh /scripts/tcl8-.6.9.sh > /mnt/lfs/sources/logs/tcl-8.6.9 2>&1
+sh /scripts/tcl-8.6.9.sh > /mnt/lfs/sources/logs/tcl-8.6.9 2>&1
 # 5.12. Expect-5.45.4
 echo "Building: 5.12. Expect-5.45.4 (22 packages left)"
 sh /scripts/expect-5.45.4.sh > /mnt/lfs/sources/logs/expect-5.45.4 2>&1

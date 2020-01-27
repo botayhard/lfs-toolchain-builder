@@ -1,14 +1,14 @@
 #!/bin/bash
-# 5.17. Bison-3.0.5
+# 5.21. File-5.37
 set -e
 cd $LFS/sources
-rm -rf bison-3.0.5
-tar xf bison-3.0.5.tar.xz
-cd bison-3.0.5
+rm -rf file-5.37
+tar xf file-5.37.tar.gz
+cd file-5.37
 
 ./configure --prefix=/tools
 make
 make install
 
 cd $LFS/sources
-rm -rf bison-3.0.5
+rm -rf file-5.37

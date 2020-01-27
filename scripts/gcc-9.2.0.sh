@@ -2,12 +2,12 @@
 # 5.5. GCC-8.2.0 - Pass 1
 set -e
 cd $LFS/sources
-rm -rf gcc-8.2.0
-tar xf gcc-8.2.0.tar.xz
-cd gcc-8.2.0
+rm -rf gcc-9.2.0
+tar xf gcc-9.2.0.tar.xz
+cd gcc-9.2.0
 
-tar -xf ../mpfr-4.0.1.tar.xz
-mv -v mpfr-4.0.1 mpfr
+tar -xf ../mpfr-4.0.2.tar.xz
+mv -v mpfr-4.0.2 mpfr
 tar -xf ../gmp-6.1.2.tar.xz
 mv -v gmp-6.1.2 gmp
 tar -xf ../mpc-1.1.0.tar.gz
@@ -48,7 +48,6 @@ cd       build
     --disable-threads                              \
     --disable-libatomic                            \
     --disable-libgomp                              \
-    --disable-libmpx                               \
     --disable-libquadmath                          \
     --disable-libssp                               \
     --disable-libvtv                               \
@@ -58,4 +57,4 @@ make
 make install
 
 cd $LFS/sources
-rm -rf gcc-8.2.0
+rm -rf gcc-9.2.0

@@ -1,10 +1,10 @@
 #!/bin/bash
-# 5.4. Binutils-2.31.1 - Pass 1
+# 5.4. Binutils-2.32 - Pass 1
 set -e
 cd $LFS/sources
-rm -rf binutils-2.31.1
-tar xf binutils-2.31.1.tar.xz
-cd binutils-2.31.1
+rm -rf binutils-2.32
+tar xf binutils-2.32.tar.xz
+cd binutils-2.32
 
 mkdir -v build
 cd       build
@@ -21,4 +21,4 @@ esac
 make install
 
 cd $LFS/sources
-rm -rf binutils-2.31.1
+rm -rf binutils-2.32
